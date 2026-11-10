@@ -1,0 +1,183 @@
+@import "primeicons/primeicons.css";
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f1f5f9;
+  margin: 0;
+  padding: 2rem 1rem;
+  color: #0f172a;
+}
+
+.poc-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.poc-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.header-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.header-banner h2 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.4rem;
+  color: #0f172a;
+}
+
+.header-banner p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.header-banner p strong {
+  color: #0284c7;
+}
+
+/* --- Botones Principales --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Botón Probar Usuario (Azul Corporativo) */
+.btn-user {
+  background-color: #0284c7;
+  color: #ffffff;
+}
+.btn-user:hover {
+  background-color: #0369a1;
+}
+
+/* Botón Probar Admin (Púrpura / Índigo) */
+.btn-admin {
+  background-color: #7c3aed;
+  color: #ffffff;
+}
+.btn-admin:hover {
+  background-color: #6d28d9;
+}
+
+/* Botón Cerrar Sesión (Rojo Destacado) */
+.btn-logout {
+  background-color: #dc2626;
+  color: #ffffff;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.875rem;
+}
+.btn-logout:hover {
+  background-color: #b91c1c;
+}
+
+/* --- Etiquetas de Roles --- */
+.roles-container {
+  margin-bottom: 1.5rem;
+}
+
+.roles-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.roles-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge-role {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid #bae6fd;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 1.5rem 0;
+}
+
+.actions-container h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+.buttons-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* --- Leyendas y Cuadros de Respuesta (Alta Legibilidad) --- */
+.response-area {
+  margin-top: 1.5rem;
+}
+
+.alert-box {
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border-left: 5px solid;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.alert-title {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.alert-success {
+  background-color: #f0fdf4;
+  border-color: #16a34a;
+  color: #14532d;
+}
+
+.alert-info {
+  background-color: #f0f9ff;
+  border-color: #0284c7;
+  color: #0c4a6e;
+}
+
+.alert-error {
+  background-color: #fef2f2;
+  border-color: #dc2626;
+  color: #7f1d1d;
+}

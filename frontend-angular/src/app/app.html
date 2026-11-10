@@ -1,0 +1,58 @@
+<div class="poc-container">
+  <div class="poc-card">
+    
+    <!-- Encabezado con Usuario y Botón de Cerrar Sesión -->
+    <div class="header-banner">
+      <div class="user-info">
+        <h2>Panel de Control de Seguridad (RBAC)</h2>
+        <p>Usuario autenticado: <strong>{{ username }}</strong></p>
+      </div>
+      <button class="btn btn-logout" (click)="logout()">
+        <i class="pi pi-power-off"></i> Cerrar Sesión
+      </button>
+    </div>
+
+    <!-- Roles del Usuario -->
+    <div class="roles-container">
+      <span class="roles-label">Roles asignados en Keycloak:</span>
+      <div class="roles-badges">
+        <span *ngFor="let role of userRoles" class="badge-role">{{ role }}</span>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Sección de Botones de Prueba -->
+    <div class="actions-container">
+      <h3>Prueba de puntos finales protegidos</h3>
+      <div class="buttons-grid">
+        <button class="btn btn-user" (click)="callUserEndpoint()">
+          <i class="pi pi-user"></i> Probar Endpoint Usuario
+        </button>
+
+        <button class="btn btn-admin" (click)="callAdminEndpoint()">
+          <i class="pi pi-shield"></i> Probar Endpoint Admin
+        </button>
+      </div>
+    </div>
+
+    <!-- Panel de Respuestas y Leyendas Legibles -->
+    <div class="response-area">
+      <div *ngIf="backendUserMessage" class="alert-box alert-success">
+        <div class="alert-title"><i class="pi pi-check-circle"></i> Respuesta Endpoint Usuario (200 OK)</div>
+        <div class="alert-message">{{ backendUserMessage }}</div>
+      </div>
+
+      <div *ngIf="backendAdminMessage" class="alert-box alert-info">
+        <div class="alert-title"><i class="pi pi-verified"></i> Respuesta Endpoint Admin (200 OK)</div>
+        <div class="alert-message">{{ backendAdminMessage }}</div>
+      </div>
+
+      <div *ngIf="errorMessage" class="alert-box alert-error">
+        <div class="alert-title"><i class="pi pi-exclamation-triangle"></i> Acceso Denegado / Restricción de Seguridad</div>
+        <div class="alert-message">{{ errorMessage }}</div>
+      </div>
+    </div>
+
+  </div>
+</div>
